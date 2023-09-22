@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_blue">
+
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="384dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/a_clock"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <ImageView
+        android:id="@+id/imOne"
+        android:layout_width="128dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="34dp"
+        android:layout_marginBottom="76dp"
+        app:layout_constraintBottom_toTopOf="@+id/imFour"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/city_six" />
+
+    <ImageView
+        android:id="@+id/imTwo"
+        android:layout_width="128dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="-2dp"
+        android:layout_marginBottom="76dp"
+        app:layout_constraintBottom_toTopOf="@+id/imFive"
+        app:layout_constraintStart_toEndOf="@+id/imOne"
+        app:srcCompat="@drawable/city_five" />
+
+    <ImageView
+        android:id="@+id/imThree"
+        android:layout_width="128dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="-2dp"
+        android:layout_marginEnd="34dp"
+        android:layout_marginBottom="76dp"
+        app:layout_constraintBottom_toTopOf="@+id/imSix"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.485"
+        app:layout_constraintStart_toEndOf="@+id/imTwo"
+        app:srcCompat="@drawable/city_three" />
+
+    <ImageView
+        android:id="@+id/imFive"
+        android:layout_width="128dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="-4dp"
+        android:layout_marginBottom="164dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imFour"
+        app:srcCompat="@drawable/city_two" />
+
+    <ImageView
+        android:id="@+id/imFour"
+        android:layout_width="128dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="34dp"
+        android:layout_marginEnd="-2dp"
+        android:layout_marginBottom="164dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imFive"
+        app:layout_constraintHorizontal_bias="0.21"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/city_four" />
+
+    <ImageView
+        android:id="@+id/imSix"
+        android:layout_width="128dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="-2dp"
+        android:layout_marginEnd="34dp"
+        android:layout_marginBottom="164dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.485"
+        app:layout_constraintStart_toEndOf="@+id/imFive"
+        app:srcCompat="@drawable/city_two" />
+
+    <TextView
+        android:id="@+id/textMoscow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="11dp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="Москва"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imOne" />
+
+    <TextView
+        android:id="@+id/textSidney"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="75dp"
+        android:layout_marginTop="11dp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="Сидней"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toEndOf="@+id/textMoscow"
+        app:layout_constraintTop_toBottomOf="@+id/imTwo" />
+
+    <TextView
+        android:id="@+id/textNY"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="11dp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="Нью-Йорк"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imFour" />
+
+    <TextView
+        android:id="@+id/textSochi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="11dp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="Сочи"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toEndOf="@+id/textNY"
+        app:layout_constraintTop_toBottomOf="@+id/imFive" />
+
+    <TextView
+        android:id="@+id/textLA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="11dp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="ЛосАнджелес"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toEndOf="@+id/textSochi"
+        app:layout_constraintTop_toBottomOf="@+id/imSix" />
+
+    <TextView
+        android:id="@+id/textGamburg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="11dp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="Гамбург"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toEndOf="@+id/textSidney"
+        app:layout_constraintTop_toBottomOf="@+id/imThree" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btNext"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="44dp"
+        android:text="Next"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:fontFamily="@font/roboto_medium"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:background="@drawable/rounded_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
