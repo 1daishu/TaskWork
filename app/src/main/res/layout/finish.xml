@@ -2,59 +2,55 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/b"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/dark_blue">
+    android:background="@color/dark_blue"
+    android:id="@+id/finish">
+
 
     <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="0dp"
+        android:id="@+id/imageView6"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="381dp"
         android:adjustViewBounds="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/a_clock" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btRestart"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="31dp"
+        android:layout_marginBottom="96dp"
+        android:background="@drawable/rounded_button"
+        android:fontFamily="@font/roboto_medium"
+        android:text="RESTART"
+        android:textColor="@color/white"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/a_clock" />
+        tools:ignore="MissingConstraints">
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btForTime"
-        android:layout_width="350dp"
+    </androidx.appcompat.widget.AppCompatButton>
+
+    <TextView
+        android:id="@+id/txGreat"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="158dp"
-        android:layout_marginEnd="159dp"
-        android:layout_marginBottom="100dp"
-        android:background="@drawable/rounded_button"
+        android:layout_marginStart="140dp"
+        android:layout_marginEnd="213dp"
+        android:layout_marginBottom="276dp"
         android:fontFamily="@font/roboto_medium"
-        android:text="Play for time"
-        android:onClick="onGoToFourthActivityBt"
+        android:text="Congratulation!\nYour finished the game"
         android:textColor="@color/white"
-        android:textSize="18sp"
-        android:textStyle="bold"
+        android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.357"
         app:layout_constraintStart_toStartOf="parent" />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btCasual"
-        android:layout_width="350dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="158dp"
-        android:layout_marginEnd="159dp"
-        android:layout_marginBottom="24dp"
-        android:background="@drawable/rounded_button"
-        android:fontFamily="@font/roboto_medium"
-        android:text="Casual"
-        android:onClick="onGoToThrirdActivityBt"
-        android:textColor="@color/white"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/btForTime"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>
