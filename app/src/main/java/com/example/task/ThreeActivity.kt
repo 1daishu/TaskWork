@@ -7,46 +7,41 @@ import android.os.Handler
 import android.view.View
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import java.util.Timer
 
 class ThreeActivity : AppCompatActivity() {
-    private val delayMin: Long = 10000
-    private lateinit var countdownTextView: TextView
-    private lateinit var countDownTimer: CountDownTimer
+    private lateinit var textTimer: TextView
+    private var countDownTimer: CountDownTimer? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_three)
-        countdownTextView = findViewById(R.id.txTimer)
-        val totalTimer: Int = 10000
-        countDownTimer = object : CountDownTimer(totalTimer.toLong(), 1000) {
-            override fun onTick(mill: Long) {
-                val secondsRemaining = mill / 1000
-                val minutes = secondsRemaining / 60
-                val seconds = secondsRemaining % 60
-                countdownTextView.text = String.format("Time:%02d:%02d second",minutes,seconds)
+        textTimer= findViewById(R.id.txTimer)
+        val initTimer: Long = 3000
+        CreateAndStartTimer(initTimer)
+    }
+
+    private fun CreateAndStartTimer(initTimer: Long) {
+        countDownTimer = object : CountDownTimer(initTimer, 1000) {
+            override fun onTick(mlSecond: Long) {
+                val second: Long = (mlSecond / 1000) % 60
+                val minutes: Long = (mlSecond / 1000) / 60
+                textTimer.text = String.format("%02d:%02d", minutes, second)
             }
 
             override fun onFinish() {
-                countdownTextView.text = "Вперед!"
+                val intent = Intent(this@ThreeActivity,GameActivity::class.java)
+                startActivity(intent)
             }
-
         }
-        countDownTimer.start()
-        fun onDestroy() {
-            super.onDestroy()
-            countDownTimer.cancel()
-        }
-
-        val handler = Handler()
-        var runnable = Runnable {
-            val intent = Intent(this, GameActivity::class.java)
-            startActivity(intent)
-            finish()
-        }
-        handler.postDelayed(runnable, delayMin)
+        countDownTimer?.start()
     }
-
     fun onGoToActivityGame(view: View) {
         val intent = Intent(this, GameActivity::class.java)
         startActivity(intent)
     }
+    override fun onResume() {
+        super.onResume()
+        CreateAndStartTimer(3000);
+    }
+
 }
