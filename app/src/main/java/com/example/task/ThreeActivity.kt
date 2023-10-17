@@ -12,11 +12,12 @@ import java.util.Timer
 class ThreeActivity : AppCompatActivity() {
     private lateinit var textTimer: TextView
     private var countDownTimer: CountDownTimer? = null
+    private var flag: Boolean = false
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_three)
-        textTimer= findViewById(R.id.txTimer)
-        val initTimer: Long = 3000
+        textTimer = findViewById(R.id.txTimer)
+        val initTimer: Long = 5000
         CreateAndStartTimer(initTimer)
     }
 
@@ -29,19 +30,24 @@ class ThreeActivity : AppCompatActivity() {
             }
 
             override fun onFinish() {
-                val intent = Intent(this@ThreeActivity,GameActivity::class.java)
+
+                val intent = Intent(this@ThreeActivity, GameActivity::class.java)
                 startActivity(intent)
+
             }
         }
         countDownTimer?.start()
     }
+
     fun onGoToActivityGame(view: View) {
         val intent = Intent(this, GameActivity::class.java)
         startActivity(intent)
+        flag = true
     }
+
     override fun onResume() {
         super.onResume()
-        CreateAndStartTimer(3000);
+        CreateAndStartTimer(5000);
     }
 
 }
