@@ -11,7 +11,7 @@ class TwoActivity:AppCompatActivity() {
         setContentView(R.layout.activity_two)
     }
     fun onGoToThrirdActivityBt(view: View){
-        val intent1 = Intent(this,ThreeActivity::class.java)
+        val intent1 = Intent(this@TwoActivity,ThreeActivity::class.java)
         startActivity(intent1)
     }
     fun onGoToFourthActivityBt(view: View){
