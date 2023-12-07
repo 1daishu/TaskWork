@@ -16,7 +16,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/a_clock" />
+        app:srcCompat="@drawable/main_clock" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btRestart"

@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">task</string>
+    <string name="casual">Casual</string>
+    <string name="play_for_time">Play for time</string>
+    <string name="play">Play</string>
+    <string name="user_answer">УКАЖИ ОТВЕТ</string>
+    <string name="ok">OK</string>
+    <string name="next">Next</string>
+    <string name="ankara">Анкара</string>
+    <string name="bogoto">Богото</string>
+    <string name="cairo">Каир</string>
+    <string name="dubai">Дубай</string>
+    <string name="moscow">Москва</string>
+    <string name="new_york">Нью-Йорк</string>
+    <string name="todo">TODO</string>
 </resources>

@@ -8,7 +8,7 @@
     android:background="@color/dark_blue">
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/mainClockActivityTwo"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="381dp"
@@ -19,10 +19,10 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/a_clock" />
+        app:srcCompat="@drawable/main_clock" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btForTime"
+        android:id="@+id/btTime"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="158dp"
@@ -30,8 +30,7 @@
         android:layout_marginBottom="100dp"
         android:background="@drawable/rounded_button"
         android:fontFamily="@font/roboto_medium"
-        android:text="Play for time"
-        android:onClick="onGoToFourthActivityBt"
+        android:text="@string/play_for_time"
         android:textColor="@color/white"
         android:textSize="18sp"
         android:textStyle="bold"
@@ -48,12 +47,11 @@
         android:layout_marginBottom="24dp"
         android:background="@drawable/rounded_button"
         android:fontFamily="@font/roboto_medium"
-        android:text="Casual"
-        android:onClick="onGoToThrirdActivityBt"
+        android:text="@string/casual"
         android:textColor="@color/white"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/btForTime"
+        app:layout_constraintBottom_toTopOf="@+id/btTime"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 

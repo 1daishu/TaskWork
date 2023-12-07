@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/twoActivity"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/dark_blue">
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/mainClockActivityFour"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="381dp"
@@ -18,16 +17,16 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/a_clock" />
+        app:srcCompat="@drawable/main_clock" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button"
+        android:id="@+id/buttonOk"
         android:layout_width="350dp"
         android:layout_height="48dp"
         android:layout_marginBottom="68dp"
         android:background="@drawable/rounded_button"
         android:fontFamily="@font/roboto_medium"
-        android:text="OK"
+        android:text="@string/ok"
         android:textColor="@color/white"
         android:textSize="18sp"
         android:textStyle="bold"
@@ -44,26 +43,24 @@
         android:background="@drawable/back_edit_text"
         android:ems="10"
         android:gravity="center"
-        android:hint="УКАЖИ ОТВЕТ"
-
+        android:hint="@string/user_answer"
         android:inputType="text"
         android:textColorHint="#DCDCDC"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintBottom_toTopOf="@+id/buttonOk"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView8"
-        android:layout_width="212dp"
-        android:layout_height="213dp"
-        android:layout_marginBottom="320dp"
+        android:id="@+id/imageCityCairo"
+        android:layout_width="177dp"
+        android:layout_height="164dp"
+        android:layout_marginBottom="304dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/city_six" />
+        app:srcCompat="@drawable/city_cairo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
